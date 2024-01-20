@@ -1,0 +1,26 @@
+.testesCodigoExtension-item-header.header {
+  height: 104px;
+}
+
+.testesCodigoExtension-item-navBar {
+  padding: 10px;
+  display: flex;
+  border-top: 1px solid;
+  border-bottom: 1px solid #000;
+  background-color: #FFF;
+}
+
+.testesCodigoExtension-item-content {
+  flex: 1 0 auto;
+  padding: 0 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.testesCodigoExtension-item-prev,
+.testesCodigoExtension-item-nextUnread {
+  margin-left: 10px;
+}
