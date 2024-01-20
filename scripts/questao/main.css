@@ -24,3 +24,9 @@
 .testesCodigoExtension-item-nextUnread {
   margin-left: 10px;
 }
+
+.testesCodigoExtension-list-item-read::before {
+  content: '✔';
+  margin-left: -13px;
+  color: green;
+}

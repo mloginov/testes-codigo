@@ -15,7 +15,6 @@ const questionIndex = parseInt(parts[1], 10)
 // todo store question seen in local storage
 const storeQuestionData = async () => {
   const result = await chrome.storage.local.get(STORAGE_KEY)
-  console.log('storage get', {...result})
   const data = result[STORAGE_KEY] || {}
   const categoryData = data[category] || []
   if (categoryData[questionIndex]) {
@@ -28,9 +27,19 @@ const storeQuestionData = async () => {
   return data
 }
 
-const renderListContent = () => {
+const renderListContent = async () => {
   console.log('render list content', parts)
-  // todo render check/cross icons for question list
+  // todo render check icons for question list
+  const result = await chrome.storage.local.get(STORAGE_KEY)
+  const data = result[STORAGE_KEY] || {}
+  const categoryData = data[category] || []
+
+  const questions = document.querySelectorAll('.main > div > p')
+  categoryData.forEach((read, index) => {
+    if (read) {
+      questions.item(index).classList.add('testesCodigoExtension-list-item-read')
+    }
+  })
 }
 
 const renderItemContent = (data) => {
