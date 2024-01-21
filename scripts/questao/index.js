@@ -3,7 +3,9 @@ const STORAGE_KEY = 'questao'
 
 const NUM_QUESTIONS_BY_CAT = {
   'A': 592,
-  'B': 3600
+  'B': 3909,
+  'C': 306,
+  'D': 349
 }
 
 const relative = location.href.replace(BASE_PATH, '')
